@@ -12,7 +12,7 @@
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
-
+.terraform/
 # Mono auto generated files
 mono_crash.*
 
@@ -155,7 +155,6 @@ coverage*.info
 
 # NCrunch
 _NCrunch_*
-.NCrunch_*
 .*crunch*.local.xml
 nCrunchTemp_*
 
@@ -399,3 +398,26 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+crash.log
+*.tfvars
+
+# Java/Gradle
+/build/
+/out/
+.gradle/
+/target/
+.classpath
+.project
+.settings/
+*.iml
+.idea/
+*.log
+
+# Sistema operativo
+*.DS_Store
+Thumbs.db
