@@ -18,11 +18,11 @@ La aplicación ofrece servicios para:
 ```
 reto-accenture/
 ├── src/
-│   ├── main/java/com/retonequi/
+│   ├── main/java/com/accenture/
 │   │   ├── domain/           # Lógica de negocio y entidades del dominio
 │   │   ├── application/       # Lógica de aplicación (excepciones de aplicación)
 │   │   └── infrastructure/   # Adaptadores de infraestructura (controladores, repositorios, utilidades externas)
-│   └── test/java/com/retonequi/domain/services/ # Pruebas unitarias de servicios de dominio
+│   └── test/java/com/accenture/domain/services/ # Pruebas unitarias de servicios de dominio
 └── terraform/ # Terraform
 ├── build.gradle
 ├── README.md
