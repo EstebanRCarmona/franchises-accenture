@@ -40,8 +40,8 @@ public class BranchController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Mono<BranchResponseDto> createBranch(
-            @Parameter(description = "Name of the branch", required = true) @RequestParam String name,
-            @Parameter(description = "ID of the franchise", required = true) @RequestParam Long franchiseId) {
+            @Parameter(description = "Name of the branch", required = true) @RequestParam(name = "name") String name,
+            @Parameter(description = "ID of the franchise", required = true) @RequestParam(name = "franchiseId") Long franchiseId) {
         return branchService.createBranch(name, franchiseId)
             .map(branchResponseDtoMapper::toDto);
     }
@@ -66,8 +66,8 @@ public class BranchController {
     })
     @PutMapping("/{id}")
     public Mono<BranchResponseDto> updateBranchName(
-            @Parameter(description = "ID of the branch to update", required = true) @PathVariable Long id,
-            @Parameter(description = "New name for the branch", required = true) @RequestParam String name) {
+            @Parameter(description = "ID of the branch to update", required = true) @PathVariable(name = "id") Long id,
+            @Parameter(description = "New name for the branch", required = true) @RequestParam(name = "name") String name) {
         return branchService.updateBranchName(id, name)
             .map(branchResponseDtoMapper::toDto);
     }

@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.function.Function;
 
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = "spring", uses = {BranchWithFranchiseDtoMapper.class, ProductWithBranchDtoMapper.class})
 public interface PageResponseDtoMapper {
     PageResponseDtoMapper INSTANCE = Mappers.getMapper(PageResponseDtoMapper.class);
 

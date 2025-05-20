@@ -37,7 +37,7 @@ public class FranchiseController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Mono<FranchiseResponseDto> createFranchise(
-            @Parameter(description = "Name of the franchise", required = true) @Valid @RequestParam String name) {
+            @Parameter(description = "Name of the franchise", required = true) @Valid @RequestParam(name = "name") String name) {
         return franchiseService.createFranchise(name)
             .map(franchiseResponseDtoMapper::toDto);
     }
@@ -49,8 +49,8 @@ public class FranchiseController {
     })
     @PutMapping("/{id}")
     public Mono<FranchiseResponseDto> updateFranchiseName(
-            @Parameter(description = "ID of the franchise to update", required = true) @PathVariable Long id,
-            @Parameter(description = "New name for the franchise", required = true) @Valid @RequestParam String name) {
+            @Parameter(description = "ID of the franchise to update", required = true) @PathVariable(name = "id") Long id,
+            @Parameter(description = "New name for the franchise", required = true) @Valid @RequestParam(name = "name") String name) {
         return franchiseService.updateFranchiseName(id, name)
             .map(franchiseResponseDtoMapper::toDto);
     }
@@ -61,8 +61,8 @@ public class FranchiseController {
     })
     @GetMapping
     public Mono<PageResponseDto<FranchiseResponseDto>> getAllFranchisesPaged(
-            @Parameter(description = "Page number", required = false) @RequestParam(defaultValue = ConstantsInfraestructure.DEFAULT_PAGE) int page,
-            @Parameter(description = "Page size", required = false) @RequestParam(defaultValue = ConstantsInfraestructure.DEFAULT_SIZE) int size) {
+            @Parameter(description = "Page number", required = false) @RequestParam(name = "page", defaultValue = ConstantsInfraestructure.DEFAULT_PAGE) int page,
+            @Parameter(description = "Page size", required = false) @RequestParam(name = "size", defaultValue = ConstantsInfraestructure.DEFAULT_SIZE) int size) {
         return franchiseService.getAllFranchisesPaged(page, size)
             .map(pageResponse -> pageResponseDtoMapper.toDto(pageResponse, franchiseResponseDtoMapper::toDto));
     }
