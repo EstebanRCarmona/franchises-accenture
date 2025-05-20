@@ -182,7 +182,7 @@ class FranchiseServiceTest {
         StepVerifier.create(result)
             .expectErrorSatisfies(error -> {
                 assertTrue(error instanceof ErrorException);
-                assertEquals("timeout when obtaining franchises", error.getMessage());
+                assertEquals("Timeout when obtaining franchises", error.getMessage());
             })
             .verify();
     }
