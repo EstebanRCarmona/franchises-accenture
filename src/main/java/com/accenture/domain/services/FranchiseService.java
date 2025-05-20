@@ -35,7 +35,7 @@ public class FranchiseService implements IFranchiseService {
             .retry(2)
             .onErrorResume(e -> {
                 if (e instanceof TimeoutException) {
-                    return Mono.error(new ErrorException("timeout when obtaining franchises"));
+                    return Mono.error(new ErrorException(ConstantsDomain.ERR_TIMEOUT_OBTAINING_FRANCHISES));
                 }
                 return Mono.error(e);
             });
@@ -52,7 +52,7 @@ public class FranchiseService implements IFranchiseService {
             .retry(2)
             .onErrorResume(e -> {
                 if (e instanceof TimeoutException) {
-                    return Mono.error(new ErrorException("timeout when obtaining franchises"));
+                    return Mono.error(new ErrorException(ConstantsDomain.ERR_TIMEOUT_OBTAINING_FRANCHISES));
                 }
                 return Mono.error(e);
             });
@@ -67,7 +67,7 @@ public class FranchiseService implements IFranchiseService {
             .retry(3)
             .onErrorResume(e -> {
                 if (e instanceof TimeoutException) {
-                    return Mono.error(new ErrorException("timeout when obtaining franchises"));
+                    return Mono.error(new ErrorException(ConstantsDomain.ERR_TIMEOUT_OBTAINING_FRANCHISES));
                 }
                 return Mono.error(e);
             });
