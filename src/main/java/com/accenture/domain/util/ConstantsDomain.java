@@ -22,4 +22,9 @@ public final  class ConstantsDomain {
     public static final String ERR_ID_NULL = "ID cannot be null";
     public static final String ERR_TIMEOUT_OBTAINING_FRANCHISES = "Timeout when obtaining franchises";
     public static final String ERR_TIMEOUT_OBTAINING_BRANCHES = "Timeout when obtaining branches";
+    public static final String ERR_TIMEOUT_UPDATE_PRODUCT_NAME = "Timeout when updating product name";
+    public static final String ERR_TIMEOUT_OBTAINING_PRODUCTS = "Timeout when obtaining products";
+    public static final String ERR_TIMEOUT_ADD_PRODUCT_TO_BRANCH = "Timeout when adding product to branch";
+    public static final String ERR_TIMEOUT_REMOVE_PRODUCT_FROM_BRANCH = "Timeout when removing product from branch";
+    public static final String ERR_TIMEOUT_UPDATE_PRODUCT_STOCK = "Timeout when updating product stock";
 }
