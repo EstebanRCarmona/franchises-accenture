@@ -11,8 +11,11 @@ springdoc:
   api-docs:
     path: /v3/api-docs
   swagger-ui:
-    path: /swagger-ui.html
+    path: /swagger-ui
+    config-url: /v3/api-docs/swagger-config
     url: /v3/api-docs
+  webjars:
+    prefix: /webjars
   info:
     title: Documentación de la prueba accenture
     description: Aca encontraran toda la información de los endpoint creados para el reto de franquicias.

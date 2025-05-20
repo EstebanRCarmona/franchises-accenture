@@ -20,4 +20,6 @@ public final  class ConstantsDomain {
     public static final String ERR_PRODUCT_NOT_IN_BRANCH = "Product is not assigned to the branch";
     public static final String ERR_FRANCHISE_ID_NULL = "Franchise id cannot be null";
     public static final String ERR_ID_NULL = "ID cannot be null";
+    public static final String ERR_TIMEOUT_OBTAINING_FRANCHISES = "Timeout when obtaining franchises";
+    public static final String ERR_TIMEOUT_OBTAINING_BRANCHES = "Timeout when obtaining branches";
 }
